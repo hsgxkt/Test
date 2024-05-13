@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>高校红色课堂</title>
+		<meta name="keywords" content="高校红色课堂" />
+		<meta name="description" content="高校红色课堂" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+		<style>
+		  body {
+		    font-family: Arial, sans-serif;
+		    background-color: #f7f7f7;
+		    padding: 20px;
+		  }
+		  .question {
+		    margin-bottom: 20px;
+		    padding: 10px;
+		    background-color: #fff;
+		    border-radius: 5px;
+		    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		  }
+		  .question label {
+		    display: block;
+		    margin-bottom: 10px;
+		  }
+		  .question input[type="radio"] {
+		    margin-right: 5px;
+		  }
+		  .correct {
+		    background-color: #dodgerblue;
+		    color: white;
+		  }
+		  .incorrect {
+		    background-color: #ffcccb;
+		    color: white;
+		  }
+		  .submit-btn {
+		    display: block;
+		    width: 100%;
+		    padding: 10px;
+		    background-color: #4CAF50;
+		    color: white;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    font-size: 16px;
+		  }
+		  .submit-btn:hover {
+		    background-color: #45a049;
+		  }
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-logo">
+				<div class="logo_box">
+					<h6 class="hidden-xs">欢迎访问高校红色课堂！</h6>
+					<div class="login">
+						<div class="collection  hidden-xs"><span>设为首页</span><b>丨</b><span>加入收藏</span></div>
+						<div class="switch">
+							<div class="zw"><a href="/" style="color: #009944;">中文版</a></div>
+							<div class="yw"><a href="/english" style="color: #fff;">英文版</a></div>
+							<div class="hk"><a href="/" style="color: darkred;;">中文版</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="logo_tetx hidden-xs">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png"></a>
+				</div>
+				<div class="hotline">
+					<h1>启思明德，筑梦中华!</h1>
+				</div>
+			</div>
+		</div>
+		<header class="header-frontend">
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand hidden-lg" href="index.html"><img src="images/logo.png" /></a>
+					</div>
+					<div class="navbar-collapse collapse" style="height: 1px;">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="abouts.html">思想理论研究</a></li>
+							<li><a href="zyhy.html">重要会议</a> </li>
+							<li><a href="zyjh.html">榜样,你好！</a></li>
+							<li><a href="zsps.html">指示批示</a></li>
+							<li><a href="xsdjs.html">青春驿站</a></li>
+							<li  class="active"><a href="dtzl.html">答题专栏</a></li>
+							<li><a href="yjfk.html">意见反馈</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="pst_bg">
+			<div class="pst">
+				您的当前位置：
+				<a href="index.html">首页</a>&gt;
+				<a href="dtzl.html">答题专栏</a>
+			</div>
+		</div>
+		<div class="scd clearfix">
+			<div class="scd_l">
+				<div class="s_name">
+					<img src="images/t7.png" width="150" height="48" alt="">
+					<i>&nbsp;</i>
+				</div>
+				<ul class="s_nav">
+					<li class="now"><a href="dttk.html">答题专栏</a></li>
+					<li ><a href="dtzl.html">竞赛专区</a></li>
+
+				</ul>
+			</div>
+			<div class="scd_r">
+				<div class="r_name"><span>答题专栏</span></div>
+				<div class="cotnact">
+					
+					<!-- <dl class="clearfix"> -->
+					<!-- <div class="container">
+					  <div class="row">
+					    <div class="col-md-12">
+					      <h1>党史答题系统</h1>
+					    </div> -->
+					  </div>
+					  <div class="row">
+					    <div class="col-md-12">
+					      <form id="quiz-form">
+					        <!-- 题目和选项静态定义 -->
+					        <div class="question">
+					          <div>1. 中国共产党的成立时间是什么时候？</div>
+					          <label><input type="radio" name="question1" value="1921年">1921年</label>
+					          <label><input type="radio" name="question1" value="1949年">1949年</label>
+					          <label><input type="radio" name="question1" value="1934年">1934年</label>
+					          <label><input type="radio" name="question1" value="1942年">1942年</label>
+					        </div>
+					        <!-- 添加更多题目 -->
+					        <div class="question">
+					          <div>2. 中国共产党第一次全国代表大会在哪个城市召开？</div>
+					          <label><input type="radio" name="question2" value="北京">北京</label>
+					          <label><input type="radio" name="question2" value="上海">上海</label>
+					          <label><input type="radio" name="question2" value="广州">广州</label>
+					          <label><input type="radio" name="question2" value="武汉">武汉</label>
+					        </div>
+					        <!-- 添加更多题目 -->
+							<div class="question">
+							  <div>3. 中国共产党领导下的第一个农民运动是什么？</div>
+							  <label><input type="radio" name="question3" value="南昌起义">南昌起义</label>
+							  <label><input type="radio" name="question3" value="秋收起义">秋收起义</label>
+							  <label><input type="radio" name="question3" value="黄麻起义">黄麻起义</label>
+							  <label><input type="radio" name="question3" value="百色起义">百色起义</label>
+							</div>
+							<div class="question">
+							  <div>4. 中国共产党领导下的第一个工人运动是什么？</div>
+							  <label><input type="radio" name="question4" value="香港海员罢工">香港海员罢工</label>
+							  <label><input type="radio" name="question4" value="广州沙面罢工">广州沙面罢工</label>
+							  <label><input type="radio" name="question4" value="上海五卅运动">上海五卅运动</label>
+							  <label><input type="radio" name="question4" value="汉口租界罢工">汉口租界罢工</label>
+							</div>
+							<div class="question">
+							  <div>5. 党的最高理想和最终目标是什么？</div>
+							  <label><input type="radio" name="question5" value="实现社会主义现代化">实现社会主义现代化</label>
+							  <label><input type="radio" name="question5" value="中华民族伟大复兴">中华民族伟大复兴</label>
+							  <label><input type="radio" name="question5" value="共同富裕">共同富裕</label>
+							  <label><input type="radio" name="question5" value="共产主义">共产主义</label>
+							</div>
+							<div class="question">
+							  <div>6. 中国共产党领导下的第一次国共合作开始于哪一年？</div>
+							  <label><input type="radio" name="question6" value="1922年">1922年</label>
+							  <label><input type="radio" name="question6" value="1923年">1923年</label>
+							  <label><input type="radio" name="question6" value="1924年">1924年</label>
+							  <label><input type="radio" name="question6" value="1925年">1925年</label>
+							</div>
+							<div class="question">
+							  <div>7. 中国共产党领导下的第一次土地革命发生在哪个省份？</div>
+							  <label><input type="radio" name="question7" value="江西">江西</label>
+							  <label><input type="radio" name="question7" value="湖南">湖南</label>
+							  <label><input type="radio" name="question7" value="广东">广东</label>
+							  <label><input type="radio" name="question7" value="广西">广西</label>
+							</div>
+							<div class="question">
+							  <div>8. 中国共产党领导下的第一个五年计划开始于哪一年？</div>
+							  <label><input type="radio" name="question8" value="1949年">1949年</label>
+							  <label><input type="radio" name="question8" value="1950年">1950年</label>
+							  <label><input type="radio" name="question8" value="1953年">1953年</label>
+							  <label><input type="radio" name="question8" value="1955年">1955年</label>
+							</div>
+							<div class="question">
+							  <div>9. 中国共产党领导下的抗日战争胜利纪念日是哪一天？</div>
+							  <label><input type="radio" name="question9" value="8月15日">8月15日</label>
+							  <label><input type="radio" name="question9" value="9月3日">9月3日</label>
+							  <label><input type="radio" name="question9" value="10月1日">10月1日</label>
+							  <label><input type="radio" name="question9" value="12月13日">12月13日</label>
+							</div>
+							<div class="question">
+							  <div>10. 中国共产党领导下的解放战争胜利纪念日是哪一天？</div>
+							  <label><input type="radio" name="question10" value="4月23日">4月23日</label>
+							  <label><input type="radio" name="question10" value="5月1日">5月1日</label>
+							  <label><input type="radio" name="question10" value="10月1日">10月1日</label>
+							  <label><input type="radio" name="question10" value="12月10日">12月10日</label>
+							</div>
+					        <button class="submit-btn" id="submit">提交答案</button>
+					      </form>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="copyright hidden-md hidden-xs mt">
+			<div class="container">
+				<div class="row">
+					<div class="copy-left">
+						<img src="images/logo1.png" />
+		
+					</div>
+					<ul class="copy-mid">
+						<li>
+							<h2>友情链接</h2>
+							<dl>
+								<dt><a href="http://www.news.cn/">新华网</a></dt>
+								<dt><a href="http://www.people.com.cn/">人民网</a></dt>
+								<dt><a href="https://www.ccps.gov.cn/">中央党校</a></dt>
+					
+							</dl>
+						</li>
+						<li>
+							<h2>关于我们</h2>
+							<dl>
+								<dt><a href="contact.html">联系我们</a></dt>
+								<dt><a href="dtzl.html">答题系统</a></dt>
+								<dt><a href="xsdjs.html">新时代纪实</a></dt>
+					
+							</dl>
+						</li>
+					</ul>
+					<div class="copy-right">
+						<p>反馈问卷</p>
+						<a href="yjfk.html"><img src="images/weixin.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copy  hidden-md hidden-xs ">高校红色课堂 All Rights Reserved&nbsp; ICP备案号：黑ICP备字123456号</div>
+		<div class="copy hidden-lg mt">
+			&copy;2022-2025 高校红色课堂
+			<p>Copyright©高校红色课堂版权所有 All Rights Reserved</p>
+		</div>
+		<script>
+		$(document).ready(function() {
+		  var questions = [
+		
+			    { questionIndex: 1, answer: "1921年", type: "single" },
+			    { questionIndex: 2, answer: "上海", type: "single" },
+				{ questionIndex: 3, answer: "秋收起义", type: "single" },
+				{ questionIndex: 4, answer: "上海五卅运动", type: "single" },
+				{ questionIndex: 5, answer: "共产主义", type: "single" },
+				{ questionIndex: 6, answer: "1924年", type: "single" },
+				{ questionIndex: 7, answer: "江西", type: "single" },
+				{ questionIndex: 8, answer: "1953年", type: "single" },
+				{ questionIndex: 9, answer: "9月3日", type: "single" },
+				{ questionIndex: 10, answer: "10月1日", type: "single" },
+			    // 添加更多题目的答案
+			  ];
+			
+			  function gradeQuiz() {
+			    var score = 0;
+			    $('.question').each(function() {
+			      var questionIndex = $(this).index() + 1;
+			      var userAnswer = [];
+			      $(this).find('input:checked').each(function() {
+			        userAnswer.push($(this).val());
+			      });
+			      var correctAnswer = questions.find(q => q.questionIndex === questionIndex).answer;
+			      if (userAnswer[0] === correctAnswer) {
+			        $(this).addClass('correct');
+			        score += 10; // 每题10分
+			      } else {
+			        $(this).addClass('incorrect');
+			      }
+			    });
+			    return score;
+			  }
+			
+			  $('#submit').click(function(e) {
+			    e.preventDefault();
+			    var finalScore = gradeQuiz();
+			    var resultMessage = '您的得分是: ' + finalScore + '/100';
+			    $('.question').removeClass('correct').removeClass('incorrect'); // 重置所有题目的状态
+			    alert(resultMessage);
+			  });
+			});
+			</script>
+	</body>
+</html>

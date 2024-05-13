@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>【HTML+CSS】知识竞赛问答随机出题系统</title>
+		<!-- LOGO -->
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+		<!-- CSS -->
+		<!-- <link rel="stylesheet" href="css/index.css"> -->
+	</head>
+	<style>
+		/* 清除内、外间距 */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* 添加背景图片 */
+		body {
+			background: url(images/background.png) no-repeat center top;
+			background-size: cover;
+			background-attachment: fixed;
+			user-select: none;
+		}
+
+		/* 背景装饰元素 */
+		.background_element01 {
+			width: 10%;
+			position: absolute;
+			top: 150px;
+			left: 50px;
+			pointer-events: none;
+		}
+
+		.background_element02 {
+			width: 25%;
+			position: absolute;
+			right: 0;
+			pointer-events: none;
+		}
+
+		.background_element03 {
+			width: 23%;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			pointer-events: none;
+		}
+
+		/* 标题、LOGO */
+		.titleBox {
+			width: 100%;
+			height: 100px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.titleBox>h2 {
+			color: darkred;
+		}
+
+		.titleBox>h1 {
+			color: darkred;
+			text-align: center;
+			font-size: 40px;
+		}
+
+		/* 主要内容 */
+		.main {
+			width: 65%;
+			background: darkred;
+			padding: 10px;
+			margin: 0 auto;
+			border-radius: 20px;
+			box-shadow: 3px 3px 0 goldenrod;
+		}
+
+		.main .title {
+			color: white;
+			text-align: center;
+			line-height: 55px;
+		}
+
+		.main>p {
+			font-size: 10px;
+			color: white;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+
+		.topicBox {
+			width: 90%;
+			height: 70%;
+			margin: 10px auto;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: left;
+			background: white;
+			border-radius: 10px;
+			padding: 20px;
+			line-height: 40px;
+			box-shadow: 3px 3px 0 goldenrod;
+		}
+
+		.topicBox>div {
+			width: 100%;
+			height: 200px;
+		}
+
+		.topicBox>div:nth-child(1) {
+			border-bottom: 3px solid darkred;
+			margin-bottom: 20px;
+		}
+
+		/* 按钮样式 */
+		.buttonBox {
+			width: 100%;
+			text-align: center;
+		}
+
+		.buttonBox input {
+			width: 200px;
+			height: 50px;
+			margin: 10px 20px;
+			font-size: 28px;
+			font-weight: bold;
+			border-radius: 10px;
+			outline: none;
+			box-shadow: 3px 3px 0 rosybrown;
+			color: darkred;
+			border: 0px;
+		}
+
+		/* 答案样式 */
+		.answer span {
+			margin-right: 30px;
+			font-size: 23px;
+		}
+
+		/* 正确答案样式 */
+		.correct_answer {
+			background: darkred;
+			color: white;
+		}
+	</style>
+
+	<body>
+		<!-- 背景装饰元素 -->
+		<img src="images/background1.png" class="background_element01">
+		<!-- <img src="images/background2.png" class="background_element02"> -->
+		<img src="images/background3.png" class="background_element03">
+
+		<!-- 标题 -->
+		<div class="titleBox">
+			<a href="index.html"><img src="images/logo.png" alt="" style="height: 45px;"/></a>
+			<h1>2024 红色高校课堂知识竞赛问答</h1>
+		</div>
+
+		<!-- 主要内容 -->
+		<div class="main">
+			<!-- 标题 -->
+			<h1 class="title">青春心向党，走进互联网</h1>
+			<!-- 出题区 -->
+			<div class="topicBox">
+				<div class="content01">
+					<!-- 党政爱国题 -->
+					<h3>
+						<p>
+							<!-- 题型 -->
+							<span>【党政爱国题】</span>
+							<!-- 题目 -->
+							<span id="topic01">1935年1月，中国中央政治局在长征途中举行（）？</span>
+						</p>
+						<!-- 答案 -->
+						<p class="answer">
+							<span id="A1">A.遵义会议</span><br />
+							<span id="B1">B.俄界会议</span><br />
+							<span id="C1">C.洛川会议</span><br />
+							<span id="D1">D.古田会议</span><br />
+						</p>
+					</h3>
+				</div>
+				<!-- 红色资源题 -->
+				<div class="content02">
+					<h3>
+						<p>
+							<!-- 题型 -->
+							<span>【红色资源题】</span>
+							<!-- 题目 -->
+							<span id="topic02">中国共产党领导下的第一个农民运动是什么？</span>
+						</p>
+						<!-- 答案 -->
+						<p class="answer">
+							<span id="A2">A.南昌起义</span><br />
+							<span id="B2">B.秋收起义</span><br />
+							<span id="C2">C.黄麻起义</span><br />
+							<span id="D2">D.百色起义</span><br />
+						</p>
+					</h3>
+				</div>
+			</div>
+
+			<!-- 开始、答案按钮 -->
+			<div class="buttonBox">
+				<input type="button" value="开始随机选题" id="begin">
+				<input type="button" value="查看正确答案" id="answer" name="one">
+				<a href="dttk.html"><input type="button" value="试题题库" ></a>
+			</div>
+
+
+		</div>
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+
+</html>
